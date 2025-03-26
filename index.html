@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ1YJH0ZMD"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-BJ1YJH0ZMD');
+     </script>
     <title>Monster Survivors - Epic Survival Adventure Game Online</title>
     <meta name="description" content="Play Monster Survivors online - An epic survival adventure where you battle endless waves of monsters. Experience intense action and strategic gameplay in this thrilling browser game.">
     <link rel="canonical" href="https://monstersurvivors.com">
@@ -20,7 +28,27 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- 新增导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <span class="text-2xl font-bold text-gray-900">MS</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-gray-900 transition-colors">Features</a>
+                    <a href="#how-to-play" class="text-gray-700 hover:text-gray-900 transition-colors">How to Play</a>
+                    <a href="#about" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Play Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 调整主容器以适应固定导航栏 -->
+    <div class="max-w-6xl mx-auto px-4 pt-20 py-8">
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">Monster Survivors</h1>
             <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -38,7 +66,9 @@
             </iframe>
         </div>
 
-        <section class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- 在对应的 section 添加 id -->
+        <section id="features" class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Features section 内容 -->
             <div>
                 <h2 class="text-2xl font-bold mb-4 text-gray-900">Game Features</h2>
                 <ul class="space-y-3 text-gray-700">
@@ -59,7 +89,12 @@
             </div>
         </section>
 
-        <section class="mb-12">
+        <section id="how-to-play" class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- How to Play section 内容 -->
+        </section>
+
+        <section id="about" class="mb-12">
+            <!-- About section 内容 -->
             <h2 class="text-2xl font-bold mb-4 text-gray-900">About Monster Survivors</h2>
             <div class="prose max-w-none text-gray-700">
                 <p class="mb-4">
@@ -70,11 +105,61 @@
                 </p>
             </div>
         </section>
-    </div>
 
-    <footer class="bg-gray-100 py-6">
+        <!-- 添加推荐游戏区域 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">More Games You May Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 游戏 1 -->
+                <a href="https://mathsedu1510.github.io/g20/class-401" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img 
+                            src="https://placehold.co/600x400/png?text=Geometry+Escape"
+                            alt="Geometry Escape"
+                            class="w-full h-full object-cover"
+                            loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Geometry Escape</h3>
+                        <p class="text-gray-600">A fast-paced arcade game with geometric challenges.</p>
+                    </div>
+                </a>
+
+                <!-- 游戏 2 -->
+                <a href="https://www.retrogames.cc/embed/42079-sonic-3-complete.html" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img 
+                            src="https://placehold.co/600x400/png?text=Sonic+3"
+                            alt="Sonic 3"
+                            class="w-full h-full object-cover"
+                            loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Sonic 3</h3>
+                        <p class="text-gray-600">Classic Sonic adventure with amazing speed.</p>
+                    </div>
+                </a>
+
+                <!-- 游戏 3 -->
+                <a href="https://www.retrogames.cc/embed/20655-adventures-of-bayou-billy-the-usa.html" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img 
+                            src="https://placehold.co/600x400/png?text=Bayou+Billy"
+                            alt="Bayou Billy"
+                            class="w-full h-full object-cover"
+                            loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Bayou Billy</h3>
+                        <p class="text-gray-600">Classic adventure in the bayou.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-gray-100 py-6">
         <div class="max-w-6xl mx-auto px-4 text-center text-gray-600">
-            <p>&copy; 2024 Monster Survivors. All rights reserved.</p>
+            <p>&copy; 2025 Monster Survivors. All rights reserved.</p>
         </div>
     </footer>
 </body>
